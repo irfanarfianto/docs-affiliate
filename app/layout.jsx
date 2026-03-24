@@ -16,7 +16,6 @@ export default async function RootLayout({ children }) {
         <Layout
           navbar={<Navbar logo={<b>Affiliate 2026</b>} />}
           pageMap={await getPageMap()}
-          footer={<Footer>MIT {new Date().getFullYear()} © Panduan Affiliate.</Footer>}
         >
           {children}
         </Layout>
