@@ -1,0 +1,41 @@
+# Workflow Produksi Konten (Pipeline Produksi Video AI)
+
+![AI Video Workflow](/images/workflow.png)
+
+Ini adalah SOP dari referensi spesifik produksi AI yang bertindak layaknya *CI/CD pipeline* untuk memproduksi konten visual afiliasi Anda secara cepat dan konsisten.
+
+Kualitas *output* video Anda sangat ditentukan oleh kualitas *input* dan instruksi di setiap fasenya. Ikuti 5 tahapan berkesinambungan berikut ini:
+
+### Fase 1 (Manual): Pre-Production & Assets Gathering
+Ini adalah tahap fondasi sebelum Anda menggunakan AI.
+*   **Aksi:** Kumpulkan dan unduh 3-5 foto produk asli yang berkualitas tinggi.
+*   **Detail Kebutuhan:** Pastikan Anda memiliki minimal 1 foto *clean shot* (berlatar belakang putih/polos), 1 foto detail (menunjukkan tekstur, logo, atau tombol penting), dan 1 foto tampak samping atau belakang.
+
+### Fase 2 (Gemini): Visual Analysis & Mockup Description
+Pada fase ini, Gemini bertindak sebagai analis visual dan desainer latar belakang.
+*   **Aksi:** Buka Gemini dan unggah semua foto produk yang telah dikumpulkan.
+*   **Instruksi (Prompt):** Minta Gemini untuk menganalisis jenis produk, warna dominan, dan material fisik produk tersebut. Kemudian, perintahkan Gemini untuk membuat 3 opsi deskripsi *prompt* latar belakang (*scenery*) yang estetik, premium, dan minimalis (misalnya: *Scandinavian desk*, *Cinematic nature*, dll) untuk menonjolkan produk.
+
+### Fase 3 (ChatGPT): Scripting & Prompt Engineering
+ChatGPT bertindak sebagai sutradara dan penulis skenario teknis untuk AI pembuat video.
+*   **Aksi:** Salin hasil analisis dan deskripsi dari Gemini, lalu masukkan ke ChatGPT.
+*   **Instruksi (Prompt):** Minta ChatGPT untuk menulis *Prompt Video* yang spesifik untuk Pipit AI dengan format *Image-to-Video* berdurasi 12-15 detik. Instruksikan pembagian menjadi 3 *scene* utama:
+    *   **Scene 1 (Hook, 3s):** Tampilan produk yang dramatis dan cepat.
+    *   **Scene 2 (Feature, 6s):** Menunjukkan detail fitur produk secara sinematik.
+    *   **Scene 3 (CTA, 3s):** Tampilan produk yang tenang dengan ruang kosong untuk menempatkan teks.
+*   **Wajib:** Beri instruksi pada ChatGPT agar menyertakan detail gerak kamera pada setiap *scene* (contoh: *"Slow Pan Left"* atau *"Cinematic Zoom-in"*).
+
+### Fase 4 (Pipit AI): Video Production
+Pipit AI akan menghidupkan gambar statis Anda menjadi klip video sinematik.
+*   **Aksi:** Buka Pipit AI dan masuk ke mode **Image-to-Video**.
+*   **Proses:** Untuk setiap *scene*, unggah gambar referensi produk yang paling sesuai dan salin *prompt* dari ChatGPT.
+*   **Setting Wajib:** Atur rasio video ke vertikal **9:16** dan atur *Motion Strength* ke level menengah (antara 4 hingga 6).
+*   **Output:** Hasilkan ( *generate* ) 3 klip video mentah (*raw clips*) secara terpisah.
+
+### Fase 5 (CapCut): Post-Production & Final Assembly
+Fase terakhir untuk menggabungkan klip, menambahkan narasi, dan menyematkan elemen penjualan.
+*   **Aksi:** Impor ketiga klip video dari Pipit AI ke dalam CapCut.
+*   **Editing & Transisi:** Atur urutan klip (Hook -> Feature -> CTA) dan potong bagian yang tidak perlu dengan menggunakan transisi **hard cut** agar perpindahan antar *scene* terasa mulus dan cepat.
+*   **Teks & Audio:** Tambahkan *copywriting* yang menyorot manfaat produk di layar dan letakkan teks *Call to Action* (CTA) yang jelas di *scene* terakhir (misal: "Cek Keranjang Kuning!"). Tambahkan *voiceover* (bisa menggunakan *Text-to-Speech*).
+*   **Musik Viral:** Masukkan musik latar yang sedang *trending* di TikTok, dan **turunkan volumenya hingga 10-20%** agar tidak menenggelamkan *voiceover*.
+*   **Export:** Simpan video akhir Anda dalam resolusi minimal 1080p dengan 30fps sebelum diunggah.
